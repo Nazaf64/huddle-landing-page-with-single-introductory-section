@@ -1,3 +1,5 @@
+/* The icons used here are all from https://fontawesome.com/ */
+
 :root{
     --border-radius: 50px;
     --violet: hsl(257, 40%, 49%);
@@ -7,20 +9,148 @@
 *{
     margin: 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 16px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    color: black;
+    color: white;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--violet);
+    background-image: url('images/bg-desktop.svg');
 }
 
 h1, h2, h3, h4, h5, h6{
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    min-height: 100vh;
-    font-family: 'Open Sans', sans-serif;
+#container{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    max-width: 90%;
 }
+
+main{
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    justify-content: center;
+    align-content: center;
+}
+
+#logo-container{
+    display: grid;
+    align-content: center;
+}
+
+header #image-container{
+    display: grid;
+    align-content: center;
+    width: 100%;
+}
+
+img#logo{
+    height: 3.5em;
+    width: auto;
+}
+
+main #text-container{
+    display: grid;
+    align-content: center;
+}
+
+main #text-container h1{
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+main #text-container p{
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-bottom: 1.7em;
+}
+
+button{
+    color: var(--violet);
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    padding: 0.9em;
+    width: 10em;
+    box-shadow: 4px 4px 11px 0px rgba(0,0,0,0.62);
+    -webkit-box-shadow: 4px 4px 11px 0px rgba(0,0,0,0.62);
+    -moz-box-shadow: 4px 4px 11px 0px rgba(0,0,0,0.62);
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--soft-magenta);
+    color: white;
+}
+
+ul#social-links{
+    float: right;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+li{
+    list-style: none;
+    cursor: pointer;
+}
+
+svg{
+    width: 3em;
+    height: 3em;
+    margin: 0.4em;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 1.3em 1.3em;
+    background-position: center;
+}
+
+svg:hover{
+    border: 1px solid var(--soft-magenta);
+}
+
+svg#facebook{
+    background-image: url("ionicons/facebook.svg");
+}
+
+svg#facebook:hover{
+    background-image: url("ionicons/facebook-hover.svg");
+}
+
+svg#twitter{
+    background-image: url("ionicons/twitter.svg");
+}
+
+svg#twitter:hover{
+    background-image: url("ionicons/twitter-hover.svg");
+    background-color: var(--blue);
+}
+
+svg#instagram{
+    background-image: url("ionicons/instagram.svg");
+}
+
+svg#instagram:hover{
+    background-image: url("ionicons/instagram-hover.svg");
+    background-color: var(--blue);
+}
+
+footer{
+    max-width: 95%;
+}
+
 
 @media screen and (max-width:850px){
 
