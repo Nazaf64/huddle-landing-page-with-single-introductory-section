@@ -20,6 +20,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     background-color: var(--violet);
     background-image: url('images/bg-desktop.svg');
+    background-size: cover;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -27,7 +28,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #container{
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -36,7 +37,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 main{
-    height: 75vh;
+    min-height: 75vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3em;
@@ -58,6 +59,10 @@ header #image-container{
 img#logo{
     height: 3.5em;
     width: auto;
+}
+
+img#mockup{
+    width: 100%;
 }
 
 main #text-container{
@@ -153,5 +158,84 @@ footer{
 
 
 @media screen and (max-width:850px){
+    body{
+        background-image: url('images/bg-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 
+    #container{
+        max-width: 80%;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        /* overflow: scroll; */
+        gap: 0;
+    }
+
+    #logo-container{
+        margin-bottom: 3em;
+    }
+
+    img#logo{
+        height: 2.5em;
+        width: auto;
+    }
+
+    img#mockup{
+        display: grid;
+        justify-content: center;
+        /* max-width: 35em; */
+        max-width: 90%;
+        margin: 0 auto;
+        margin-bottom: 3em;
+    }
+    
+    main{
+        grid-template-columns: 1fr;
+        gap: 2em;
+        text-align: center;
+        /* margin-bottom: 3em; */
+    }
+
+    main #text-container h1{
+        font-size: 1.8em;
+        font-weight: 600;
+        margin-bottom: 0.5em;
+    }
+    
+    main #text-container p{
+        font-size: 1.1em;
+        font-weight: 400;
+        line-height: 1.6em;
+        margin-bottom: 1.7em;
+    }
+
+    button{
+        font-size: 1em;
+        font-weight: 400;
+        padding: 0.7em;
+        width: 65%;  
+        margin: 0 auto;
+        margin-bottom: 3em;
+    }
+
+    footer{
+        display: block;
+        margin: 0 auto;
+    }
+
+    ul#social-links{
+        float: none;
+    }
+
+    svg{
+        width: 2.5em;
+        height: 2.5em;
+        margin: 0.4em;
+        border: 1px solid white;
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-size: 1.1em 1.1em;
+        background-position: center;
+    }
 }
